@@ -15,6 +15,8 @@ class Social(BaseModel):
     icon_url: str
     link: str
     user_id: str
+    class Config:
+        orm_mode = True
 
 class User(BaseModel):
     id: str

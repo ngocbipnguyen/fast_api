@@ -1,6 +1,5 @@
 from sqlalchemy import BigInteger, Column, Integer, String, Boolean, BigInteger,ForeignKey
 from sqlalchemy.orm import declarative_base,relationship
-
 Base = declarative_base()
 
 class SocialModel(Base):
@@ -12,6 +11,6 @@ class SocialModel(Base):
     link = Column(String, nullable=False)
     # FK
     user_id = Column(String, ForeignKey("user.id"))
-    user = relationship("UserModel", back_populates="social")
+    user = relationship("UserModel", back_populates="social")  
 
 
